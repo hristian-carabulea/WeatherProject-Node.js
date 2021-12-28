@@ -57,7 +57,7 @@ app.post("/", function(req, res){
   var responseCode = 0;
   const query = req.body.cityName;
   require("./config.js");
-  const apiKey = ANOTHER_SECRET_API_KEY;
+  const apiKey = SECRET_API_KEY;
   const unit = "metric";
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + unit;
   /* For light rain icon = "10d" the picture URL is https://openweathermap.org/img/wn/10d@2x.png */
