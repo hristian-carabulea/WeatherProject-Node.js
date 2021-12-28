@@ -10,7 +10,6 @@
 
 ### 4. App purpose: get current weather data for a location by city name - see https://openweathermap.org/current.
 
-### 5. To run this project, you must get your own app key from Openweathermap.org. Register for a free account.
-### Otherwise you cannot get any weather data via the Openweathermap API.
+### 5. To run this project, you must get your own app key from Openweathermap.org. Register for a free account. Otherwise you cannot get any weather data via the Openweathermap API.
 ##
 ##
