@@ -1,39 +1,6 @@
 // must login to openweathermap.org and get own api id
 // paste the URL below in the browser, and using the JSON Viewer Pro extension you get the info below.
-/* 
-{
-  coord: { lon: 8.6331, lat: 48.3624 },
-  weather: [ { id: 500, main: 'Rain', description: 'light rain', icon: '10n' } ],
-  base: 'stations',
-  main: {
-    temp: 6.95,
-    feels_like: 4.35,
-    temp_min: 5.61,
-    temp_max: 8.61,
-    pressure: 1004,
-    humidity: 100,
-    sea_level: 1004,
-    grnd_level: 952
-  },
-  visibility: 10000,
-  wind: { speed: 3.82, deg: 200, gust: 9.63 },
-  rain: { '1h': 0.14 },
-  clouds: { all: 100 },
-  dt: 1640624200,
-  sys: {
-    type: 2,
-    id: 2034438,
-    country: 'DE',
-    sunrise: 1640589378,
-    sunset: 1640619396
-  },
-  timezone: 3600,
-  id: 2824855,
-  name: 'Sulz am Neckar',
-  cod: 200
-}
-*/
-// added https://  to the URL copied from the Postman app.  
+
 //******************************* MUST ADD YOUR OWN OPENWEATHERMAPID IN THE APPID BELOW ***********************************/
 // const url = "https://api.openweathermap.org/data/2.5/weather?
 //****************************************************************************************************************/
@@ -97,9 +64,11 @@ app.post("/", function(req, res){
         console.log("imageURL: " + imageURL);
 
         res.write("<h1>The current weather for " + cityName + ":</h1>");
+
         res.write("<h2>The temperature is " + temp + " degrees Celcius.</h2>");
         res.write("<h2>The temperature feels like " + feels_like + " degrees Celcius.</h2>");
         res.write("<h2>The weather description is " + mainDescription + ".</h2>");
+        res.write("<h2>Cloud coverage: " + clouds + " %" + ".</h2>");
         // res.write("<p>The weather ID is currently " + weatherID + ".</p>");
         // res.write("<p>The weather icon is currently " + mainIcon + ".</p>");
         res.write("<img src=" + imageURL + ">");
